@@ -1,0 +1,7 @@
+body, html{
+    background-image: -webkit-linear-gradient(top, hsl(0, 80%, 70%), #bada55);
+}
+
+#comic.loading{
+    opacity: 0.5
+}
