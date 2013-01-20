@@ -35,3 +35,21 @@ AxeCop = function(){
 
     return that;
 }();
+
+var index = 0;
+var showCurrent = function(){
+    AxeCop.show(index);
+};
+
+$(function(){
+    showCurrent();
+    jwerty.key('right', function(){
+	index += 1;
+	showCurrent();
+    });
+
+    jwerty.key('left', function(){
+	index -= 1;
+	showCurrent();
+    });
+});
