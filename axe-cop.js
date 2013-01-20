@@ -59,7 +59,7 @@ $(function(){
 	$('#options').toggleClass('show');
     });
 
-    $('#option').submit(function(e){
+    $('#options').submit(function(e){
 	e.preventDefault();
 	var input = $(this).find('input[name="pageNum"]');
 	index = parseInt(input.val(), 10);
