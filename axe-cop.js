@@ -12,6 +12,7 @@ var ComicFinder = function(){
 var ComicDisplayer = function(el){
     el[0].onload = function(){
 	el.removeClass('loading');
+
     }
     var that = {
 	show: function(url){
@@ -39,6 +40,7 @@ AxeCop = function(){
 var index = 0;
 var showCurrent = function(){
     AxeCop.show(index);
+    $(document).scrollTop(0);
 };
 
 $(function(){
@@ -57,7 +59,7 @@ $(function(){
 	$('#options').toggleClass('show');
     });
 
-    $('#options').submit(function(e){
+    $('#option').submit(function(e){
 	e.preventDefault();
 	var input = $(this).find('input[name="pageNum"]');
 	index = parseInt(input.val(), 10);
